@@ -1,0 +1,107 @@
+# Hexo 配置
+## 文档: https://hexo.io/docs/configuration.html
+## 源码: https://github.com/hexojs/hexo/
+
+# 站点
+title: JoyBoyCS's Blog
+subtitle: ''
+description: '临渊羡鱼,不如退而结网'
+keywords: leaning, study, C, C++, Python, HTML, CSS, JavaScript, 学习, 成长, blog, 认知
+author: JoyBoyCS
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# URL
+## 在这里设置你的站点 url.例如,如果你使用 GitHub Page,设置 url 为 'https://username.github.io/project'
+url:  https://joyboycs.github.io
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # 设置为 false 可以从 permalinks 中移除尾随的 'index.html'
+  trailing_html: true # 设置为 false 可以从 permalinks 中移除尾随的 '.html'
+
+# 目录
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# 写作
+new_post_name: :title.md # 新文章的文件名
+default_layout: post
+titlecase: false # 将标题转化为 titlecase
+external_link:
+  enable: true # 在新标签页打开外部链接
+  field: site # 对整个站点起作用
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# 主页设置
+# path: 博客索引页的根路径.(默认 = '')
+# per_page: 每页显示的文章数量.(0 = 禁用分页)
+# order_by: 文章排序.(默认按日期降序)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# 分类 & 标签
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata 元素
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# 日期 / 时间格式
+## Hexo 使用 Moment.js 来解析和展示日期
+## 你可以自定义日期格式,如在下面的链接中定义的
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option 支持 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# 分页
+## 将 per_page 设置为 0 可以禁用分页
+per_page: 15
+pagination_dir: page
+
+# 包含 / 排除 文件
+## include:/exclude: 选项只对 'source/' 文件夹起作用
+include:
+exclude:
+ignore:
+
+# 扩展
+## 插件: https://hexo.io/plugins/
+## 主题: https://hexo.io/themes/
+theme: next
+
+# 部署
+## 文档: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repo: https://github.com/JoyBoyCS/JoyBoyCS.github.io.git
+  branch: main
