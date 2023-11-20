@@ -64,7 +64,7 @@ footer:
     color: "#ECD813"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
-  copyright:
+  copyright: 
 
   # Powered by Hexo & NexT
   powered: true
@@ -253,7 +253,9 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
+  awl: 2 #平均每个字符的长度
+  wpm: 300 #words per minute
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -355,25 +357,25 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  highlight_theme: galactic
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
+    style: 
 
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
@@ -381,7 +383,7 @@ reading_progress:
 
 # Bookmark Support
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
@@ -412,7 +414,7 @@ font:
   enable: false
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host:
+  host: fonts.useso.com
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -464,7 +466,7 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification:
+google_site_verification: google-site-verification=_wHFRX9bjO_vMg-K23VuZAqHYsicrvtNUwKZlTenloU
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
@@ -517,7 +519,7 @@ pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
-fancybox: false
+fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Do not enable both `fancybox` and `mediumzoom`.
@@ -526,11 +528,11 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://github.com/ApoorvSaxena/lozad.js
-lazyload: false
+lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Quicklink Support
 # Do not enable both `pjax` and `quicklink`.
@@ -611,12 +613,12 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
+  enable: true
+  appid: TUt8DGJRSUKm89fYW9tRG5Uh-gzGzoHsz
+  appkey: CGhtMtPrLDURGUnehz0uUCE1
   notify: false # Mail notifier
   verify: false # Verification code
-  placeholder: Just go go # Comment box placeholder
+  placeholder: go! go! go! ヾﾉ≧∀≦)o 大家一起来吐槽呀! # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
@@ -824,7 +826,7 @@ mermaid:
 # Use velocity to animate everything.
 # For more information: http://velocityjs.org
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # Transition variants:
@@ -854,17 +856,20 @@ pace:
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 three:
-  enable: false
+  enable: true
   three_waves: false
   canvas_lines: false
   canvas_sphere: false
+
+canvas_nest:
+  enable: true 
 
 # Canvas-ribbon
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # For more information: https://github.com/zproo/canvas-ribbon
 canvas_ribbon:
-  enable: true
-  size: 300 # The width of the ribbon
+  enable: false
+  size: 100 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
 
@@ -979,20 +984,21 @@ vendors:
   pace_css:
 
   # Internal version: 1.0.0
-  # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
-  # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
-  # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
-  # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
-  three:
-  three_waves:
-  canvas_lines:
-  canvas_sphere:
+  three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
+  three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/three-waves.min.js
+  canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/canvas_lines.min.js
+  canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@latest/canvas_sphere.min.js
 
   # Internal version: 1.0.0
-  # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
 
 # Assets
 css: css
 js: js
 images: images
+
+# 文章结束标记
+passage_end_tag:
+  # 是否显示文章结束标记
+  enable: true
+
