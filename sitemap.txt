@@ -10,7 +10,7 @@ https://joyboycs.github.io/sitemap/index.html
 https://joyboycs.github.io/categories/index.html
 https://joyboycs.github.io/tags/index.html
 https://joyboycs.github.io/
-https://joyboycs.github.io/tags/%E5%AD%A6%E4%B9%A0/
 https://joyboycs.github.io/tags/C/
-https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/
+https://joyboycs.github.io/tags/%E5%AD%A6%E4%B9%A0/
 https://joyboycs.github.io/categories/C/
+https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/
