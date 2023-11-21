@@ -13,7 +13,7 @@
   <url>
     <loc>https://joyboycs.github.io/2023/11/13/hello-world/</loc>
     
-    <lastmod>2023-11-20</lastmod>
+    <lastmod>2023-11-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -116,10 +116,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://joyboycs.github.io/tags/C/</loc>
+    <lastmod>2023-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2023-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyboycs.github.io/categories/C/</loc>
     <lastmod>2023-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

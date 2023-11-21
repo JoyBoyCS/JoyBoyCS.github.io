@@ -33,17 +33,38 @@
       </tags>
   </entry>
   <entry>
-    <title>test</title>
+    <title>C++学习随笔-静态成员</title>
     <url>/2023/11/21/1/</url>
-    <content><![CDATA[<p>asdawsdasda</p>
-<p>大萨达</p>
-<p>大声道艾斯</p>
+    <content><![CDATA[<h1 id="静态成员中遇到的问题"><a href="#静态成员中遇到的问题" class="headerlink" title="静态成员中遇到的问题"></a>静态成员中遇到的问题</h1><p>今天学到C++的静态成员时,由于一处报错,让自己感觉到这块当时并没有完全学明白,代码片段如下:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//静态成员函数</span></span><br><span class="line">	<span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		m_A = <span class="number">100</span>;	   </span><br><span class="line">		<span class="comment">//m_B = 100;  //静态成员函数不可以访问非静态成员变量</span></span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;static void func调用&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">static</span> <span class="type">int</span> m_A; <span class="comment">//静态成员变量</span></span><br><span class="line">	<span class="type">int</span> m_B;	<span class="comment">//非静态成员变量</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>其中被注释掉的m_B是报错的部分,因为这个地方的报错其实在我大脑中抛出了两个问题,后面的部分也是围着这两个部分去写的,刚入坑的小白也可以一起思考一下:</p>
+<p><strong style="background-color: blue; color: white;">1.为什么静态成员函数不可以访问非静态成员变量?</strong><br><strong style="background-color: blue; color: white;">2.静态成员函数和静态成员变量的核心表达是什么?</strong></p>
+<span id="more"></span>
+
+<h1 id="为什么静态成员函数不可以访问非静态成员变量"><a href="#为什么静态成员函数不可以访问非静态成员变量" class="headerlink" title="为什么静态成员函数不可以访问非静态成员变量?"></a>为什么静态成员函数不可以访问非静态成员变量?</h1><h2 id="用定义去讲"><a href="#用定义去讲" class="headerlink" title="用定义去讲"></a>用定义去讲</h2><p>原因在于它们的存储方式和作用域.静态成员函数是属于类本身的,而不是类的具体实例.这意味着在没有创建对象的情况下,就可以调用静态成员函数.</p>
+<p>由于静态成员函数不依赖于任何特定的对象实例来存在,它就没有办法确定应该访问哪一个对象的非静态成员变量.因为每一个对象的非静态成员变量都是独立分配的内存空间,每个对象的非静态成员变量值都可能不同.所以在设计时规定静态成员函数不能直接访问非静态成员变量,因为它们不属于任何一个对象实例.</p>
+<h2 id="用人话来讲"><a href="#用人话来讲" class="headerlink" title="用人话来讲"></a>用人话来讲</h2><p>大家应该都不会喜欢一堆枯燥的文字,一下用个比喻来讲解一下就是:</p>
+<div style="background-color: lightblue;">
+    <p>想象一下,有一个大班级,里面有很多学生.这个班级(类)有一个规则(静态成员变量),比如说上课时间是早上8点开始,这个规则对所有学生(对象)都是一样的.</p>
+    <p>现在,假设你是那个负责告知规则的广播员(静态成员函数).你只能宣布全班统一的规则,比如上课时间.但是你不知道每个学生个人的信息,比如每个学生的名字或者他们的分数(非静态成员变量),因为这些信息是每个学生独有的,与其他同学无关.</p>
+    <p>所以作为广播员,你可以说:"注意,所有学生请在早上8点到教室上课." 但你不能说:"小明今天的分数是90分." 因为在没有具体指明是哪个学生的情况下,这句话对于全班来说没有意义,其他学生会困惑,不知道这个信息跟他们有什么关系.</p>
+</div>
+
+<p>回到编程中的静态成员函数,它就像班级里的广播员,可以公布对整个班级(类)通用的信息(静态成员变量),但是它不能处理个别学生(对象)的私有信息(非静态成员变量)因为没有指定到底是哪个学生的信息.而且在编程中,静态成员函数甚至没有办法确定是否存在任何学生(对象是否已经被创建),因为静态成员函数与对象的创建无关.</p>
+<h1 id="静态成员函数和静态成员变量的核心表达是什么"><a href="#静态成员函数和静态成员变量的核心表达是什么" class="headerlink" title="静态成员函数和静态成员变量的核心表达是什么?"></a>静态成员函数和静态成员变量的核心表达是什么?</h1><p>静态成员变量和静态成员函数是类的两种特殊类型的成员,它们与类的实例(也就是对象)没有直接的关联.</p>
+<h2 id="以下是他们的一些核心表达"><a href="#以下是他们的一些核心表达" class="headerlink" title="以下是他们的一些核心表达:"></a>以下是他们的一些核心表达:</h2><p><strong>1.静态成员变量:</strong><br>静态成员变量属于整个类,不归任何单一的对象所有,而是属于类本身.你可以将其视为类的全局变量.由于静态成员变量属于类,因此它们被该类的所有对象共享.在任何地方修改了这个变量,改变对所有使用这个变量的对象都是可见的.静态成员变量在程序开始时分配内存,并且只初始化一次,在程序结束时释放.静态成员变量独立于对象存在,即使没有创建类的对象,这个变量也存在.</p>
+<p><strong>2.静态成员函数:</strong><br>静态成员函数不需要对象就可以调用,它们可以直接通过类来调用,不必先创建对象.静态成员函数仅能访问类的静态成员变量或其他静态成员函数,它们不能访问类的非静态成员变量或成员函数,因为后者依赖于具体的对象实例.静态成员函数通常用于执行与对象无关的操作,例如进行数学计算或处理静态成员变量.</p>
+<p><strong>总的来说,静态成员(无论是变量还是函数)更像是与类相关联的全局元素.它们为类提供了一种方法来保持跨多个对象的状态,或者提供服务工具函数,而这些并不需要依附于类的具体实例.</strong></p>
+<h2 id="用个比喻来讲"><a href="#用个比喻来讲" class="headerlink" title="用个比喻来讲"></a>用个比喻来讲</h2><p>想象一家餐厅(这家餐厅就是一个类),它有一个大钟表(静态成员变量)挂在墙上.这个大钟表对所有进入餐厅的人(对象或类的实例)都可见,并且不管是谁看到的时间都是一样的.如果这个钟慢了,所有人都会受到影响,因为它是共享的.这就是静态成员变量的意思__它是所有对象共用的.</p>
+<p>现在,这家餐厅还提供了一个电话预订服务(静态成员函数),任何人(不必是餐厅里的顾客)都可以打电话来预订座位,而不需要亲自到餐厅来.这个电话服务不依赖于餐厅内部的任何特定客户或事物,它是独立存在的.这正像静态成员函数__你不需要一个对象的实例就能调用它,并且它处理的事情不涉及具体的对象.</p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>博主现在还在不断学习阶段,认知有限,见识也很浅薄,如果有什么理解错的地方还望大佬们不吝指正.</p>
+<p>后续我会不断分享一些自己学习过程中感觉比较难懂的地方,还有一些问题刨根问底的探究.</p>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>C++</category>
       </categories>
       <tags>
-        <tag>学习</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
 </search>
