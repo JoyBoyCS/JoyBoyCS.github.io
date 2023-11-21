@@ -6,7 +6,7 @@
   <link href="https://joyboycs.github.io/atom.xml" rel="self"/>
   
   <link href="https://joyboycs.github.io/"/>
-  <updated>2023-11-20T16:01:55.120Z</updated>
+  <updated>2023-11-21T11:19:13.624Z</updated>
   <id>https://joyboycs.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://joyboycs.github.io/2023/11/21/1/"/>
+    <id>https://joyboycs.github.io/2023/11/21/1/</id>
+    <published>2023-11-21T11:18:54.393Z</published>
+    <updated>2023-11-21T11:19:13.624Z</updated>
+    
+    <content type="html"><![CDATA[<p>asdawsdasda</p><p>大萨达</p><p>大声道艾斯</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;asdawsdasda&lt;/p&gt;
+&lt;p&gt;大萨达&lt;/p&gt;
+&lt;p&gt;大声道艾斯&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="学习" scheme="https://joyboycs.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>第一站,我的博客</title>

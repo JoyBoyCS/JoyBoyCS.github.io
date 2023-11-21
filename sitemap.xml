@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://joyboycs.github.io/2023/11/21/1/</loc>
+    
+    <lastmod>2023-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://joyboycs.github.io/2023/11/13/hello-world/</loc>
     
     <lastmod>2023-11-20</lastmod>
