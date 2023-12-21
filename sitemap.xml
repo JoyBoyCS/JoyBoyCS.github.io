@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://joyboycs.github.io/lib/reading_progresssssssss/package.json</loc>
+    <loc>https://joyboycs.github.io/lib/reading_progresssssssss/README.html</loc>
     
     <lastmod>2023-11-19</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://joyboycs.github.io/lib/reading_progresssssssss/README.html</loc>
+    <loc>https://joyboycs.github.io/lib/reading_progresssssssss/package.json</loc>
     
     <lastmod>2023-11-19</lastmod>
     
@@ -74,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://joyboycs.github.io/sitemap/index.html</loc>
-    
-    <lastmod>2023-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://joyboycs.github.io/categories/index.html</loc>
     
     <lastmod>2023-11-17</lastmod>
@@ -103,22 +94,22 @@
 
   <url>
     <loc>https://joyboycs.github.io/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://joyboycs.github.io/tags/C/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <loc>https://joyboycs.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://joyboycs.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <loc>https://joyboycs.github.io/tags/C/</loc>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -126,15 +117,15 @@
 
   
   <url>
-    <loc>https://joyboycs.github.io/categories/C/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <loc>https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://joyboycs.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2023-11-21</lastmod>
+    <loc>https://joyboycs.github.io/categories/C/</loc>
+    <lastmod>2023-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
